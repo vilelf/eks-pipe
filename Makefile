@@ -4,3 +4,6 @@ install_eksctl:
 install_helm:
 	export VERIFY_CHECKSUM=false
 	curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+create_eks:
+	eksctl create cluster -f cluster.yaml
