@@ -11,7 +11,7 @@ vpc:
   nat:
     gateway: HighlyAvailable
 nodeGroups:
-  - name: eks-node-group
+  - name: eks-ng
     instanceType: t3.medium
     desiredCapacity: 3
     privateNetworking: true
