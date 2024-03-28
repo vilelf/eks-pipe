@@ -1,0 +1,10 @@
+name: EKS Creation
+on: [push]
+jobs:
+  create-eks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make install_eksctl
+      - run: make install_helm
+
