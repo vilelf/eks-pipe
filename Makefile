@@ -6,5 +6,10 @@ install_helm:
 	export VERIFY_CHECKSUM=false
 	curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 
+setup_aws:
+	export AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+	export AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+	export AWS_DEFAULT_REGION=us-east-1
+
 create_eks:
 	eksctl create cluster -f cluster.yaml

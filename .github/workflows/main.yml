@@ -7,5 +7,6 @@ jobs:
       - uses: actions/checkout@v4
       - run: make install_eksctl
       - run: make install_helm
+      - run: make setup_aws
       - run: make create_eks
 
