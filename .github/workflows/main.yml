@@ -14,4 +14,10 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
       - run: make create_eks
+      - run: make create_kube_config
+  install_argo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make install_argo
+    needs: create-eks
 

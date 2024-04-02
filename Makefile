@@ -13,3 +13,10 @@ setup_aws:
 
 create_eks:
 	eksctl create cluster -f cluster.yaml
+
+create_kube_config:
+	aws eks update-kubeconfig --region us-east-1 --name eks-cluster
+
+install_argo:
+	kubectl create namespace argocd
+	kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
